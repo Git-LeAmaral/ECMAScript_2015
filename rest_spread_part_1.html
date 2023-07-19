@@ -5,8 +5,24 @@
           //CONTEXTO SPREAD -> Utilizado para expandir
 
           //String
-          
-        
+          let tituloArtigo = 'Como utilizar o operador rest/spread'
+          console.log(tituloArtigo);
+          console.log(...tituloArtigo);//Aqui a frase foi expandida e distribuida para uma string única
+          console.log([...tituloArtigo]);// podemos pegar esse resultado expandido e colocar dentro de arrays 
+          console.log({...tituloArtigo});//e dentro de objetos
+
+          //ARRAY
+          let listaCursos1 = ['NodeJS e MongoDB', 'Angular']
+          let listaCursos2 = ['Solid', 'Laravel']
+          let listaCompletaCursos = ['Web Completo', 'Banco de Dados', ...listaCursos1, ...listaCursos2]
+
+          console.log(listaCompletaCursos);
+
+          //OBJETOS 
+          let pessoa = {nome: 'Leandro', idade: 36}
+          let cadastroCompleto = {endereco: 'Rua Dr. Manoel', ...pessoa}
+
+          console.log(cadastroCompleto);
 
         </script>
     </body>
