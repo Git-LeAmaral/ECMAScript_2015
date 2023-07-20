@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script>
+
+            class Pessoa {
+                constructor(name = '', idade) {
+                    this.name = name
+                    this.idade = idade
+                }
+
+                saudacao() {
+                  console.log(`Olá! Meu nome é ${this.name}, e tenho ${this.idade} anos`);
+                }
+            }
+
+            class Aluno extends Pessoa {
+                constructor() {
+                    super('Leticia', 13)
+                    this.notas = { trabalho1: 7, trabalho2: 8, prova1: 6, prova2: 9 }
+                }
+
+                mediaFinalPonderada() {
+                    let media = this.notas.trabalho1 * 2
+                    media += this.notas.trabalho2 * 2 
+                    media += this.notas.prova1 * 3 
+                    media += this.notas.prova2 * 3 
+                    media = media / 10
+
+                    return media
+                }
+            }
+
+            let aluno = new Aluno()
+            console.log('Aluno: ', aluno.mediaFinalPonderada());
+            aluno.saudacao()
+
+        </script>
+    </body>
+</html>
