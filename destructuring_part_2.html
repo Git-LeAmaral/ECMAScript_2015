@@ -1,0 +1,34 @@
+<html>
+    <body>
+        <script>
+
+            //DESTRUCTURING ASSIGMENT NO CONTEXTO DE OBJETOS
+
+            let produto = {
+              descricao: 'Notebook',
+              preco: 2500,
+              detalhes: {
+                fabricante: 'Lenovo',
+                modelo: 'ThinkPad'
+              }
+            }
+
+            // let { descricao, preco } = produto
+
+            // console.log(descricao, preco);
+
+            //NOMEAR AS VARIÁVEIS COM OUTROS NOMES
+            // let { descricao: d, preco: p } = produto
+            // console.log(d, p);
+
+            //VALORES DEFAULT PARA LIDAR COM ATRIBUTOS UNDEFINED
+            // let { descricao, preco, desconto = 8 } = produto
+            // console.log(descricao, preco, desconto);
+
+            //EXTRAIR ATRIBUTOS DE OBJETOS PERTENCENTES A ATRIBUTOS DO OBJETO
+            let { descricao, detalhes: { fabricante, modelo} } = produto
+            console.log(descricao, fabricante, modelo);
+
+        </script>
+    </body>
+</html>
