@@ -1,0 +1,35 @@
+<html>
+    <body>
+        <script>
+
+            //DESTRUCTURING ASSIGMENT NO CONTEXTO DE FUNÇÃO array
+
+            let array1 = [10, 20, 30, 40]
+
+            // function teste([a, b]) { //Destructuring
+            function teste([ a, b, , c]) { //Pular valores  
+              console.log(a, b, c);
+            }
+
+            // teste(array1)
+
+            //FUNÇÃO OBJETO
+
+            let objeto = {
+              a: 10,
+              b: 20,
+              c: 30,
+              d: 40
+            }
+
+            // function teste2(c, d) {
+            function teste2({ c, d, t = 100 }) {  
+              console.log(c, d, t);
+            }
+
+            // teste2(objeto.a, objeto.b)
+            teste2(objeto)
+
+        </script>
+    </body>
+</html>
